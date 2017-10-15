@@ -1,0 +1,43 @@
+﻿生成启动时间为 2017/10/15 11:37:39。
+     1>项目“E:\Wopu\YANGHE\GIT\wine_detect\highCameraDLL\highCameraDLL.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\Program Files (x86)\opencv249\opencv\build\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HIGHCAMERADLL_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Debug\highCameraDLL.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\Program Files (x86)\opencv249\opencv\build\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HIGHCAMERADLL_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt BpNet.cpp DetectWines.cpp highCameraDLL.cpp WineCount.cpp
+         WineCount.cpp
+     1>WineCount.cpp(8): warning C4005: “_DEBUG”: 宏重定义
+                 命令行参数: 参见前面的“_DEBUG”定义
+     1>WineCount.cpp(71): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>WineCount.cpp(158): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>WineCount.cpp(168): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+         highCameraDLL.cpp
+         DetectWines.cpp
+     1>DetectWines.cpp(172): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>DetectWines.cpp(320): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(355): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(463): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(529): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(692): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(912): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(924): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(1170): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>DetectWines.cpp(1502): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>DetectWines.cpp(1504): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+         BpNet.cpp
+         正在生成代码...
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"D:\Program Files (x86)\opencv249\opencv\build\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HIGHCAMERADLL_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files (x86)\opencv249\opencv\build\x64\vc12\lib" opencv_core249d.lib opencv_highgui249d.lib opencv_imgproc249d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.lib" /MACHINE:X64 /DLL x64\Debug\BpNet.obj
+         x64\Debug\DetectWines.obj
+         x64\Debug\dllmain.obj
+         x64\Debug\highCameraDLL.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\WineCount.obj
+            正在创建库 E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.lib 和对象 E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.exp
+         highCameraDLL.vcxproj -> E:\Wopu\YANGHE\GIT\wine_detect\x64\Debug\highCameraDLL.dll
+     1>已完成生成项目“E:\Wopu\YANGHE\GIT\wine_detect\highCameraDLL\highCameraDLL.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.06
