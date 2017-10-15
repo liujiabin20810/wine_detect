@@ -47,7 +47,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	ChighCameraDLL _detect;
 
-	string path = "E:\\Wopu\\YANGHE\\WineData\\1002\\";
+	string path = "E:\\Wopu\\YANGHE\\WineData\\1014_new\\01\\";
 
 	if (!_detect.yanghe_init(""))
 	{
@@ -55,10 +55,15 @@ int _tmain(int argc, _TCHAR* argv[])
 		return -1;
 	}
 
-	Mat background0 = cv::imread("bg0.bmp", 0);
-	Mat background1 = cv::imread("bg1.bmp", 0);
-	Mat background2 = cv::imread("bg2.bmp", 0);
-	Mat background3 = cv::imread("bg3.bmp", 0);
+	Mat background0 = cv::imread("cam0_0000.jpg", 0);
+	Mat background1 = cv::imread("cam1_0000.jpg", 0);
+	Mat background2 = cv::imread("cam2_0000.jpg", 0);
+	Mat background3 = cv::imread("cam3_0000.jpg", 0);
+
+	if (!background0.empty())
+	{
+		background0(Rect(0, 0, 2592, 570)) = 0;
+	}
 
 	if (!_detect.yanghe_setBackground(background0, background1, background2, background3))
 	{
@@ -66,11 +71,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		return -1;
 	}
 
-	for (int fileNum = 30; fileNum <= 165; fileNum++)
+	for (int fileNum = 72; fileNum <= 220; fileNum++)
 	{
 		
 		string _id;
-		to_string_format(_id, "%04d.bmp", fileNum);
+		to_string_format(_id, "%04d.jpg", fileNum);
 		string filename0 = path + "cam0_" + _id;
 		string filename1 = path + "cam1_" + _id;
 		string filename2 = path + "cam2_" + _id;
@@ -85,11 +90,21 @@ int _tmain(int argc, _TCHAR* argv[])
 		Mat img2 = cv::imread(filename2, 0);
 		Mat img3 = cv::imread(filename3, 0);
 
-		if (!img0.data || !img1.data || !img2.data || !img3.data)
+		if (!img0.data || (!img1.data && !img2.data && !img3.data))
 		{
 			std::cout << "¶ÁÈ¡Ê§°Ü" << endl;
 			continue;
 		}
+		
+
+		if (img1.empty())
+			background1.copyTo(img1);
+
+		if (img2.empty())
+			background2.copyTo(img2);
+
+		if (img3.empty())
+			background3.copyTo(img3);
 
 		double t1 = getTickCount();
 
